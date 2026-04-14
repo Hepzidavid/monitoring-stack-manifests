@@ -11,16 +11,16 @@ metadata:
 rules:
 - apiGroups: [""]
   resources:
-    - nodes
-    - nodes/proxy
-    - services
-    - endpoints
-    - pods
+  - nodes
+  - nodes/proxy
+  - services
+  - endpoints
+  - pods
   verbs: ["get", "list", "watch"]
-- apiGroups: ["extensions", "apps"]
+- apiGroups:
+  - extensions
   resources:
-    - deployments
-    - replicasets
+  - ingresses
   verbs: ["get", "list", "watch"]
 - nonResourceURLs: ["/metrics"]
   verbs: ["get"]
